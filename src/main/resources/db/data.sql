@@ -1,0 +1,2 @@
+INSERT INTO CUSTOMER (id, customerid, name, balance) VALUES ('98337ba9-abb1-486a-bbe6-c3a7b3328a21', 'roh143', 'N. Modi', 2300);
+INSERT INTO CUSTOMER (id, customerid, name, balance) VALUES ('98337ba9-abb1-486a-bbe6-c3a7b3328a31', 'swap1432', 'D. Trump', 250.50);

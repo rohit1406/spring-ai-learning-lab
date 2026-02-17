@@ -1,0 +1,2 @@
+Get me the account details of the customer having customer id {customer_id}.
+If you don't find any customer with the given id then say "User account does not exists in our database. Please provide valid user id."

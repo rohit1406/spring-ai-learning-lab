@@ -1,0 +1,6 @@
+CREATE TABLE CUSTOMER (
+    id VARCHAR(100) PRIMARY KEY,
+    customerid VARCHAR(100) NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    balance DOUBLE default 0.0
+);

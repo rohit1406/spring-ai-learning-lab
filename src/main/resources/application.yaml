@@ -1,0 +1,58 @@
+spring:
+  application:
+    name: spring-ai-application
+
+  ai:
+    openai:
+      api-key: ${API_KEY_OPENAI}
+      chat:
+        options:
+          model: gpt-4.1
+
+    cafe:
+      api-key: ${AICAFE_API_KEY}
+      endpoint: ${AICAFE_ENDPOINT}
+      api-version: 2024-12-01-preview
+      model: gpt-4.1
+
+
+  weather:
+    api:
+      base-url: http://api.weatherapi.com/v1
+      api-key: ${WEATHER_API_KEY}
+
+# in-memory database: h2
+  h2:
+    console:
+      enabled: true
+
+  datasource:
+    url: jdbc:h2:mem:userdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ""
+
+  sql:
+    init:
+      # init the database with below scripts no matter which db you use (in-memory or actual)
+      mode: always
+      schema-locations: classpath:/db/schema.sql
+      data-locations: classpath:/db/data.sql
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.H2Dialect
+
+# logging
+logging:
+  level:
+    me:
+      ai:
+        training: DEBUG
+    org:
+      springframework:
+        ai:
+          chat:
+            client:
+              advisor: DEBUG
