@@ -30,5 +30,10 @@ Start the server locally and refer to [Swagger API](http://localhost:8080/swagge
 
 ### Some Useful links
 [Configure H2 in-memory database in Spring Boot](https://medium.com/@madhurajayashanka/h2-database-on-spring-boot-a-beginners-guide-8cc49c27e83c)
+
 [How Spring Boot initializes data on successful start up](https://medium.com/@AlexanderObregon/running-sql-scripts-automatically-at-spring-boot-startup-62ae2dd03087)
+
 [Spring Data JPA](https://medium.com/@bshiramagond/jpa-with-spring-boot-a-comprehensive-guide-with-examples-e07da6f3d385)
+
+[Configure SQLite](https://medium.com/@AlexanderObregon/using-spring-boot-with-sqlite-for-lightweight-apps-6c7624a0f438)
+

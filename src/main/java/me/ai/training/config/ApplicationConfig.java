@@ -51,7 +51,7 @@ public class ApplicationConfig {
                 .temperature(0.7)
                 // words+punctuations -> maximum length of response.
                 // too high -> cost + latency
-                .maxTokens(50)
+                .maxTokens(200)
                 // nucleus sampling - controls word choices
                 // default - 0.9 -> considers top 90% probability words
                 // 1.0 -> considers all possible words

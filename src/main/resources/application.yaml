@@ -2,7 +2,14 @@ spring:
   application:
     name: spring-ai-application
 
+  #controls when to initialize schema - embedded, always, never
+  #Spring AI will automatically create table spring_ai_chat_memory with columns
   ai:
+    chat:
+      memory:
+        repository:
+          jdbc:
+            initialize-schema: always
     openai:
       api-key: ${API_KEY_OPENAI}
       chat:
@@ -24,25 +31,36 @@ spring:
 # in-memory database: h2
   h2:
     console:
-      enabled: true
-
-  datasource:
-    url: jdbc:h2:mem:userdb
-    driverClassName: org.h2.Driver
-    username: sa
-    password: ""
+      enabled: false
+  custom:
+    h2:
+    # h2 - in memory database
+      datasource:
+        url: jdbc:h2:mem:userdb
+        driverClassName: org.h2.Driver
+        username: sa
+        password: ""
+    sqlite:
+      datasource:
+        enabled: true
+        # SQLite file based db
+        url: jdbc:sqlite:./src/main/resources/db/db.sqlite
+        driverClassName: org.sqlite.JDBC
+        username: sa
+        password: ""
 
   sql:
     init:
       # init the database with below scripts no matter which db you use (in-memory or actual)
       mode: always
       schema-locations: classpath:/db/schema.sql
-      data-locations: classpath:/db/data.sql
+      #data-locations: classpath:/db/data.sql
 
   jpa:
     hibernate:
       ddl-auto: none
-    database-platform: org.hibernate.dialect.H2Dialect
+    #database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
 
 # logging
 logging:

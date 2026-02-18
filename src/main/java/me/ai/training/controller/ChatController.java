@@ -53,7 +53,7 @@ import org.springframework.web.bind.annotation.*;
  *  - If multiple advisors are have same order value then execution order is not guaranteed
  *
  *  Memory in AI
- *     - LLM are stateless (ie) LLM doesnt remember anything about the previous interaction
+ *     - LLM are stateless (ie) LLM doesnot remember anything about the previous interaction
  *     - LLM have no memory of previous conversation
  *     - the memory feature is implemented by the application level(chatgpt.copilot), not by the LLM itself
  *

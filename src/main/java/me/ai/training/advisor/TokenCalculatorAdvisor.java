@@ -34,6 +34,7 @@ public class TokenCalculatorAdvisor implements CallAdvisor, StreamAdvisor {
 
     @Override
     public Flux<ChatClientResponse> adviseStream(ChatClientRequest chatClientRequest, StreamAdvisorChain streamAdvisorChain) {
+        log.info("inside TokenCalculatorAdvisor::adviseStream with request: {}", chatClientRequest);
         return streamAdvisorChain.nextStream(chatClientRequest);
     }
 
