@@ -1,6 +1,7 @@
+-- Note: use DOUBLE PRECISION for POSTGRES db and DOUBLE for h2/sqlite
 CREATE TABLE IF NOT EXISTS CUSTOMER (
     id VARCHAR(100) PRIMARY KEY,
     customerid VARCHAR(100) NOT NULL,
     name VARCHAR(100) NOT NULL,
-    balance DOUBLE default 0.0
+    balance DOUBLE PRECISION default 0.0
 );

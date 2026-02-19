@@ -24,6 +24,8 @@ The following Spring AI concepts are implemented in this repository.
 To run the application you need to set environment variables 
 - **API_KEY_OPENAI** - subscription Key from [OpenAI](https://api.openai.com/) api provider.
 - **WEATHER_API_KEY** - api key from the [weather api provider](http://api.weatherapi.com/v1).
+ 
+- [OpenSearch installation for Vector database](https://docs.opensearch.org/latest/install-and-configure/install-opensearch/windows/)
 
 ### Endpoints Exposed
 Start the server locally and refer to [Swagger API](http://localhost:8080/swagger-ui/index.html) for the endpoint details and technical documentation.
@@ -36,4 +38,5 @@ Start the server locally and refer to [Swagger API](http://localhost:8080/swagge
 [Spring Data JPA](https://medium.com/@bshiramagond/jpa-with-spring-boot-a-comprehensive-guide-with-examples-e07da6f3d385)
 
 [Configure SQLite](https://medium.com/@AlexanderObregon/using-spring-boot-with-sqlite-for-lightweight-apps-6c7624a0f438)
+
 

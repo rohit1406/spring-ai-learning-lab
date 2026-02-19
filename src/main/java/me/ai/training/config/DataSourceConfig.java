@@ -24,6 +24,7 @@ public class DataSourceConfig {
     private Environment environment;
     private final String H2_DATASOURCE_PREFIX = "spring.custom.h2.datasource";
     private final String SQLITE_DATASOURCE_PREFIX = "spring.custom.sqlite.datasource";
+    private final String POSTGRES_DATASOURCE_PREFIX = "spring.custom.postgres.datasource";
 
     @Bean
     @ConditionalOnBooleanProperty(prefix = SQLITE_DATASOURCE_PREFIX, name = "enabled")
@@ -47,6 +48,18 @@ public class DataSourceConfig {
         dataSource.setUrl(Objects.requireNonNull(environment.getProperty(H2_DATASOURCE_PREFIX+".url")));
         dataSource.setUsername(Objects.requireNonNull(environment.getProperty(H2_DATASOURCE_PREFIX+".username")));
         dataSource.setPassword(Objects.requireNonNull(environment.getProperty(H2_DATASOURCE_PREFIX+".password")));
+        return dataSource;
+    }
+
+    @Bean
+    @ConditionalOnBooleanProperty(prefix = POSTGRES_DATASOURCE_PREFIX, name = "enabled")
+    public DataSource postgresDataSource(){
+        log.info("Creating Postgres datasource");
+        DriverManagerDataSource dataSource= new DriverManagerDataSource();
+        dataSource.setDriverClassName(Objects.requireNonNull(environment.getProperty(POSTGRES_DATASOURCE_PREFIX+".driverClassName")));
+        dataSource.setUrl(Objects.requireNonNull(environment.getProperty(POSTGRES_DATASOURCE_PREFIX+".url")));
+        dataSource.setUsername(Objects.requireNonNull(environment.getProperty(POSTGRES_DATASOURCE_PREFIX+".username")));
+        dataSource.setPassword(Objects.requireNonNull(environment.getProperty(POSTGRES_DATASOURCE_PREFIX+".password")));
         return dataSource;
     }
 }

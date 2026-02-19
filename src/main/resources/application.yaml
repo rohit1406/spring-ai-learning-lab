@@ -10,8 +10,23 @@ spring:
         repository:
           jdbc:
             initialize-schema: always
+    vectorstore:
+      # Installation: https://docs.opensearch.org/latest/install-and-configure/install-opensearch/windows/
+      # vector_store table is auto created
+      opensearch:
+        uris: http://localhost:9200
+        username: admin
+        password: H@ppyNemYear2026
+        index-name: spring-ai-document-index
+        initialize-schema: true
+        similarity-function: cosinesimil
+
+
     openai:
       api-key: ${API_KEY_OPENAI}
+      embedding:
+        options:
+          deployment-name: text-embedding-3-small
       chat:
         options:
           model: gpt-4.1
@@ -28,26 +43,35 @@ spring:
       base-url: http://api.weatherapi.com/v1
       api-key: ${WEATHER_API_KEY}
 
-# in-memory database: h2
+# enable this property to use h2 database (lightweight in-memory/file based)
   h2:
     console:
-      enabled: false
+      enabled: true
   custom:
     h2:
     # h2 - in memory database
       datasource:
-        url: jdbc:h2:mem:userdb
+        url: jdbc:h2:file:./src/main/resources/db/db.h2
         driverClassName: org.h2.Driver
         username: sa
         password: ""
+    # Enable this property to use SQLite lightweight file based db
     sqlite:
       datasource:
-        enabled: true
-        # SQLite file based db
+        enabled: false
         url: jdbc:sqlite:./src/main/resources/db/db.sqlite
         driverClassName: org.sqlite.JDBC
         username: sa
         password: ""
+    # Enable this property to use Postgres server based database (you need to install postgres db as a separate service in your system for this)
+    postgres:
+      datasource:
+        enabled: false
+        url: jdbc:postgresql://localhost:5432/postgres
+        driverClassName: org.postgresql.Driver
+        username: postgres
+        password: root
+
 
   sql:
     init:
@@ -57,10 +81,15 @@ spring:
       #data-locations: classpath:/db/data.sql
 
   jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: none
+    # Dialects are automatically detected by SpringBoot based on db url
     #database-platform: org.hibernate.dialect.H2Dialect
-    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    #database-platform: org.hibernate.community.dialect.SQLiteDialect
+    #database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 # logging
 logging:
