@@ -20,12 +20,15 @@ spring:
         index-name: spring-ai-document-index
         initialize-schema: true
         similarity-function: cosinesimil
+      #pgvector:
+       # initialize-schema: true
 
 
     openai:
       api-key: ${API_KEY_OPENAI}
       embedding:
         options:
+          # this is required for RAG
           deployment-name: text-embedding-3-small
       chat:
         options:

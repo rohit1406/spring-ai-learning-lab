@@ -9,6 +9,7 @@ The following Spring AI concepts are implemented in this repository.
 7. Data Augmentation Techniques such as Stuffing, Tool Calling/Function calling (used in lower versions of spring ai - 1.0.6) are utilized while retrieving data from LLM.
 8. Use of ChatMemory: to remember the conversation history and form the context with it to answer the upcoming questions from the user.
 9. Use of Advisors: to intercept the request
+10. RAG using manual search request creation, QuestionAnswerAdvisor, RetrievalAugmentationAdvisor
 
 # Assignments Implemented
 1. Create a SpringBoot service using SpringAI that takes dynamic user input to generate a customized travel itinerary. Participants must demonstrate how to use PromptTemplate to manage dynamic variables and a System Message to define the Persona.
