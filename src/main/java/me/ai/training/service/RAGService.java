@@ -65,7 +65,7 @@ public class RAGService {
         // load data from vector db
         SearchRequest searchRequest = SearchRequest.builder()
                 .topK(3) // return me the top 3 results based on the similarity search
-                .similarityThreshold(0.6) //filter the response. A value between 0.0 to 1.0, 1.0-exact match, 0.0-loose match, good range 0.5 to 0.7 to get balanced response
+                .similarityThreshold(0.3) //filter the response. A value between 0.0 to 1.0, 1.0-exact match, 0.0-loose match, good range 0.5 to 0.7 to get balanced response
                 .query(query) // user query
                 .build();
         List<Document> documents = vectorStore.similaritySearch(searchRequest);
@@ -89,7 +89,7 @@ public class RAGService {
     public String getAnswerQAAdvisor(String query) {
         return chatClient.prompt()
                 .advisors(QuestionAnswerAdvisor.builder(vectorStore)
-                        .searchRequest(SearchRequest.builder().topK(3).similarityThreshold(0.5).build()).build())
+                        .searchRequest(SearchRequest.builder().topK(3).similarityThreshold(0.3).build()).build())
                 .user(usrSpec -> usrSpec.text(codingAssistantUserMessage).param("query", query))
                 .call().content();
     }
@@ -99,7 +99,7 @@ public class RAGService {
                 .documentRetriever(
                         VectorStoreDocumentRetriever.builder()
                                 .vectorStore(vectorStore)
-                                .topK(3).similarityThreshold(0.5)
+                                .topK(3).similarityThreshold(0.3)
                                 .build()
                 )
                 .build();
