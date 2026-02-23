@@ -1,5 +1,6 @@
 package me.ai.training.service;
 
+import lombok.extern.slf4j.Slf4j;
 import me.ai.training.config.AiCafeConfig;
 import me.ai.training.dto.Message;
 import me.ai.training.dto.Request;
@@ -18,6 +19,7 @@ import java.util.List;
  * AiCafeUsingRestTemplateService: uses RestTemplate to interact with Aicafe
  */
 @Service
+@Slf4j
 public class AiCafeUsingRestTemplateService {
     private final AiCafeConfig aiCafeConfig;
     private final RestTemplate restTemplate;
@@ -37,7 +39,29 @@ public class AiCafeUsingRestTemplateService {
         HttpHeaders headers = new HttpHeaders();
         headers.add("api-key", aiCafeConfig.getApiKey());
         headers.add("Content-Type", "application/json");
-        ResponseEntity<Response> response = restTemplate.exchange(aiCafeConfig.getUri(), HttpMethod.POST, new HttpEntity<>(request, headers), Response.class);
+        ResponseEntity<Response> response = restTemplate.exchange(aiCafeConfig.getChatUrl(), HttpMethod.POST, new HttpEntity<>(request, headers), Response.class);
+        return response.getBody();
+    }
+
+    /**
+     * Asks AiCafe to create a joke based on information provided in message using RestTemplate
+     * @param message
+     * @return
+     */
+    public String getResponseUsingVectorDb(String message){
+        IO.println("Using RestTemplate for getting response from AiCafe");
+        String request = """
+                {
+                  "input": [
+                    "What is React?"
+                  ]
+                }
+                """;
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("api-key", aiCafeConfig.getApiKey());
+        headers.add("Content-Type", "application/json");
+        ResponseEntity<String> response = restTemplate.exchange(aiCafeConfig.getEmbeddingUri(), HttpMethod.POST, new HttpEntity<>(request, headers), String.class);
+        log.info("Embedding response from custom rest calling: {}", response.getBody());
         return response.getBody();
     }
 

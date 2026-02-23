@@ -4,8 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 import me.ai.training.util.DataUtil;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
-import org.springframework.ai.chat.client.advisor.SafeGuardAdvisor;
-import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
 import org.springframework.ai.chat.client.advisor.vectorstore.QuestionAnswerAdvisor;
 import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.ai.chat.prompt.ChatOptions;
@@ -19,8 +17,6 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Vector;
-
 
 /**
  * @author Rohit Muneshwar
@@ -38,6 +34,7 @@ public class RAGService {
     private Resource codingAssistantSystemMessage;
     @Value("classpath:/prompts/coding-assistant-via-rag-um.st")
     private Resource codingAssistantUserMessage;
+
     public RAGService(ChatClient.Builder chatClientBuilder, ChatOptions chatOptions, ChatMemory chatMemory,
                       VectorStore vectorStore, DataFeedService dataFeedService){
         this.dataFeedService = dataFeedService;
@@ -45,6 +42,7 @@ public class RAGService {
         this.chatClient = chatClientBuilder
                 //.defaultSystem("You are helpful coding assistant. You are good in coding.")
                 .defaultAdvisors(MessageChatMemoryAdvisor.builder(chatMemory).build()
+                        //new TokenCalculatorAdvisor()
                         //new SimpleLoggerAdvisor()
                         //new SafeGuardAdvisor(List.of("C++"))
                 )

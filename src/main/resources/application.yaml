@@ -26,16 +26,20 @@ spring:
 
     openai:
       api-key: ${API_KEY_OPENAI}
-      embedding:
-        options:
-          # this is required for RAG
-          deployment-name: text-embedding-3-small
       chat:
         options:
           model: gpt-4.1
 
+
+
     cafe:
+      enabled: false
+      base-url: ${AICAFE_BASE_URL}
       api-key: ${AICAFE_API_KEY}
+      completion-path: /openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview
+      embedding-path: /openai/deployments/ada/embeddings?api-version=2023-05-15
+      embedding-deployment-name: ADA
+      chat-deployment-name: gpt-4.1
       endpoint: ${AICAFE_ENDPOINT}
       api-version: 2024-12-01-preview
       model: gpt-4.1
