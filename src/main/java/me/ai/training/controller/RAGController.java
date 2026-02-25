@@ -2,11 +2,12 @@ package me.ai.training.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import me.ai.training.service.AdvancedRAGService;
 import me.ai.training.service.RAGService;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 
 /**
@@ -20,21 +21,10 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/rag")
 public class RAGController {
     private final RAGService ragService;
-    public RAGController(RAGService ragService){
+    private final AdvancedRAGService advancedRAGService;
+    public RAGController(RAGService ragService, AdvancedRAGService advancedRAGService){
         this.ragService = ragService;
-    }
-
-    @Operation(summary = "save data to Vector Store", description = """
-            Use this method to ONLY save the test data to vector store
-            """)
-    @GetMapping("/save-test-data")
-    public ResponseEntity<String> saveTestData(){
-        try {
-            ragService.saveTestData();
-            return ResponseEntity.ok("Data saved successfully");
-        }catch(Exception ex){
-            return ResponseEntity.status(HttpStatus.CONFLICT).body("Data could not be saved: "+ex.getMessage());
-        }
+        this.advancedRAGService = advancedRAGService;
     }
 
     @Operation(summary = "Simple RAG flow: Get the answer to the asked query using data stored in vector table.", description = """
@@ -89,5 +79,42 @@ public class RAGController {
     @GetMapping("/answer-coding-doubt")
     public String getAnswerWithAdvisor2(@RequestParam(name = "q", defaultValue = "What is Java?") String query){
         return ragService.getAnswerRAAdvisor(query);
+    }
+
+    @Operation(summary = "RAG flow: Get the answer to the asked query using data stored in vector table using QuestionAnswerAdvisor", description = """
+            Sample data is already stored in vector table using '/save-employee-project-test-data'. If not present then trigger that endpoint.
+            Possible values for document-id and tenant-id are: DOC1:ORG, DOC2:ORG, DOC3:ORG.
+            
+            This endpoint answers the query based on that data only using similarity search capability of a vector database. 
+            If answer to the query is not found then it returns response like that. 
+            In this example, QuestionAnswerAdvisor is used:
+            It automatically runs similarity search on the vector db - retrieves relavant document - build the prompts - inject context - add instructions- send final prompt to LLM
+            """)
+    @GetMapping("/answer-from-document")
+    public String getAnswerWithSpecificDocumentId(@RequestParam(name = "question", defaultValue = "Who works in department alpha?") String query,
+                                                  @RequestParam(name="document-id") String documentId,
+                                                  @RequestHeader(name="X-TENANT") String tenantId){
+        return advancedRAGService.getAnswerFromDocument(query, documentId, tenantId);
+    }
+
+    @Operation(summary = "RAG flow: Get the answer to the asked query using data stored in vector table using QuestionAnswerAdvisor", description = """
+            Sample data is already stored in vector table using '/save-employee-project-test-data'. If not present then trigger that endpoint.
+            Possible values for document-id and tenant-id are: DOC1:ORG, DOC2:ORG, DOC3:ORG.
+            
+            It follows the references given in the document to perform further searches in the linked documents.
+            
+            This endpoint answers the query based on that data only using similarity search capability of a vector database. 
+            If answer to the query is not found then it returns response like that. 
+            In this example, QuestionAnswerAdvisor is used:
+            It automatically runs similarity search on the vector db - retrieves relavant document - build the prompts - inject context - add instructions- send final prompt to LLM
+            """)
+    @GetMapping("/multi-hop-search")
+    public Map<String, Object> getAnswerUsingMultihopSearches(@RequestParam(name = "question", defaultValue = "Who works in department alpha?") String query,
+                                                              @RequestParam(name="start-document-id") String startDocumentId,
+                                                              @RequestHeader(name="X-TENANT") String tenantId,
+                                                              @RequestParam(defaultValue = "3") int maxHops,
+                                                              @RequestParam(defaultValue = "5") int topK,
+                                                              @RequestParam(defaultValue = "0.3") double threshold){
+        return advancedRAGService.getAnswerWithMultihopSearch(query, startDocumentId, tenantId, maxHops, topK, threshold);
     }
 }

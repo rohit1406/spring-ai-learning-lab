@@ -1,7 +1,6 @@
 package me.ai.training.service;
 
 import lombok.extern.slf4j.Slf4j;
-import me.ai.training.util.DataUtil;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.client.advisor.vectorstore.QuestionAnswerAdvisor;
@@ -27,7 +26,6 @@ import java.util.List;
 @Service
 @Slf4j
 public class RAGService {
-    private final DataFeedService dataFeedService;
     private final VectorStore vectorStore;
     private final ChatClient chatClient;
     @Value("classpath:/prompts/coding-assistant-via-rag-sm.st")
@@ -36,8 +34,7 @@ public class RAGService {
     private Resource codingAssistantUserMessage;
 
     public RAGService(ChatClient.Builder chatClientBuilder, ChatOptions chatOptions, ChatMemory chatMemory,
-                      VectorStore vectorStore, DataFeedService dataFeedService){
-        this.dataFeedService = dataFeedService;
+                      VectorStore vectorStore){
         this.vectorStore = vectorStore;
         this.chatClient = chatClientBuilder
                 //.defaultSystem("You are helpful coding assistant. You are good in coding.")
@@ -47,10 +44,6 @@ public class RAGService {
                         //new SafeGuardAdvisor(List.of("C++"))
                 )
                 .defaultOptions(chatOptions).build();
-    }
-
-    public void saveTestData(){
-        dataFeedService.saveData(DataUtil.getData());
     }
 
     /**

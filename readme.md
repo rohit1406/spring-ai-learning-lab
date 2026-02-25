@@ -10,6 +10,8 @@ The following Spring AI concepts are implemented in this repository.
 8. Use of ChatMemory: to remember the conversation history and form the context with it to answer the upcoming questions from the user.
 9. Use of Advisors: to intercept the request
 10. RAG using manual search request creation, QuestionAnswerAdvisor, RetrievalAugmentationAdvisor
+11. Searching through Documents with document id and tenant id and topic with QuestionAnswerAdvisor
+12. MultiHop RAG: search through multiple files and chain of documents (chained retrieval). Model those relations as metadata.
 
 # Assignments Implemented
 1. Create a SpringBoot service using SpringAI that takes dynamic user input to generate a customized travel itinerary. Participants must demonstrate how to use PromptTemplate to manage dynamic variables and a System Message to define the Persona.
@@ -40,4 +42,8 @@ Start the server locally and refer to [Swagger API](http://localhost:8080/swagge
 
 [Configure SQLite](https://medium.com/@AlexanderObregon/using-spring-boot-with-sqlite-for-lightweight-apps-6c7624a0f438)
 
+OpenSearch:
+[OpenSearch Windows Installation](https://docs.opensearch.org/latest/install-and-configure/install-opensearch/windows/)
+
+[OpenSearch Dashboard Windows Installation](https://docs.opensearch.org/latest/install-and-configure/install-dashboards/windows/)
 

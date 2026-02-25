@@ -12,7 +12,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.json.JacksonJsonHttpMessageConverter;
 import org.springframework.web.client.RestClient;
-import org.springframework.web.util.UriComponentsBuilder;
 import tools.jackson.databind.SerializationFeature;
 import tools.jackson.databind.json.JsonMapper;
 
@@ -79,6 +78,7 @@ public class AiCafeConfig {
     }
 
     @Bean
+    @ConditionalOnBooleanProperty(prefix = "spring.ai.cafe", name = "enabled")
     OpenAiEmbeddingModel openAiEmbeddingModel(OpenAiApi openAiApi){
         return new OpenAiEmbeddingModel(openAiApi);
     }
