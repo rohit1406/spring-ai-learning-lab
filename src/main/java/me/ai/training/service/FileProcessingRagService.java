@@ -16,12 +16,12 @@ import java.util.Map;
  */
 @Service
 @Slf4j
-public class AdvancedRAGService {
+public class FileProcessingRagService {
     private final ChatClient chatClient;
     private final MultiHopSearchRagService multiHopSearchRagService;
 
-    public AdvancedRAGService(ChatClient.Builder chatClientBuilder, ChatOptions chatOptions,
-                              QuestionAnswerAdvisor questionAnswerAdvisor, MultiHopSearchRagService multiHopSearchRagService){
+    public FileProcessingRagService(ChatClient.Builder chatClientBuilder, ChatOptions chatOptions,
+                                    QuestionAnswerAdvisor questionAnswerAdvisor, MultiHopSearchRagService multiHopSearchRagService){
         this.chatClient = chatClientBuilder.defaultOptions(chatOptions)
                 .defaultAdvisors(questionAnswerAdvisor).build();
         this.multiHopSearchRagService = multiHopSearchRagService;

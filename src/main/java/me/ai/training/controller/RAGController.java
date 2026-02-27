@@ -2,7 +2,8 @@ package me.ai.training.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import me.ai.training.service.AdvancedRAGService;
+import me.ai.training.service.AdvancedRagProcessingService;
+import me.ai.training.service.FileProcessingRagService;
 import me.ai.training.service.RAGService;
 
 import org.springframework.web.bind.annotation.*;
@@ -16,15 +17,20 @@ import java.util.Map;
  *
  *
  */
-@Tag(name = "Lab7: RAG")
+@Tag(name = "Lab7: RAG", description = """
+        Note: You can use /data-feed api to feed the sample test data to vector database.
+        """)
 @RestController
 @RequestMapping("/rag")
 public class RAGController {
     private final RAGService ragService;
-    private final AdvancedRAGService advancedRAGService;
-    public RAGController(RAGService ragService, AdvancedRAGService advancedRAGService){
+    private final FileProcessingRagService fileProcessingRagService;
+    private final AdvancedRagProcessingService advancedRagProcessingService;
+    public RAGController(RAGService ragService, FileProcessingRagService fileProcessingRagService,
+                         AdvancedRagProcessingService advancedRagProcessingService){
         this.ragService = ragService;
-        this.advancedRAGService = advancedRAGService;
+        this.fileProcessingRagService = fileProcessingRagService;
+        this.advancedRagProcessingService = advancedRagProcessingService;
     }
 
     @Operation(summary = "Simple RAG flow: Get the answer to the asked query using data stored in vector table.", description = """
@@ -39,7 +45,7 @@ public class RAGController {
         return ragService.getAnswer(query);
     }
 
-    @Operation(summary = "Simple RAG flow: Get the answer to the asked query using data stored in vector table using QuestionAnswerAdvisor", description = """
+    @Operation(summary = "RAG flow: Get the answer to the asked query using data stored in vector table using QuestionAnswerAdvisor", description = """
             Sample data is already stored in vector table using '/save-test-data'.
             This endpoint answers the query based on that data only using similarity search capability of a vector database. 
             If answer to the query is not found then it returns response like that. 
@@ -51,7 +57,7 @@ public class RAGController {
         return ragService.getAnswerQAAdvisor(query);
     }
 
-    @Operation(summary = "Advanced RAG flow: Get the answer to the asked query using data stored in vector table using RetrievalAugumentationAdvisor", description = """
+    @Operation(summary = "RAG flow: Get the answer to the asked query using data stored in vector table using RetrievalAugumentationAdvisor", description = """
             Sample data is already stored in vector table using '/save-test-data'.
             This endpoint answers the query based on that data only using similarity search capability of a vector database. 
             If answer to the query is not found then it returns response like that. 
@@ -94,10 +100,10 @@ public class RAGController {
     public String getAnswerWithSpecificDocumentId(@RequestParam(name = "question", defaultValue = "Who works in department alpha?") String query,
                                                   @RequestParam(name="document-id") String documentId,
                                                   @RequestHeader(name="X-TENANT") String tenantId){
-        return advancedRAGService.getAnswerFromDocument(query, documentId, tenantId);
+        return fileProcessingRagService.getAnswerFromDocument(query, documentId, tenantId);
     }
 
-    @Operation(summary = "RAG flow: Get the answer to the asked query using data stored in vector table using QuestionAnswerAdvisor", description = """
+    @Operation(summary = "RAG flow (look through multiple files): Get the answer to the asked query from multiple linked files using data stored in vector table", description = """
             Sample data is already stored in vector table using '/save-employee-project-test-data'. If not present then trigger that endpoint.
             Possible values for document-id and tenant-id are: DOC1:ORG, DOC2:ORG, DOC3:ORG.
             
@@ -115,6 +121,14 @@ public class RAGController {
                                                               @RequestParam(defaultValue = "3") int maxHops,
                                                               @RequestParam(defaultValue = "5") int topK,
                                                               @RequestParam(defaultValue = "0.3") double threshold){
-        return advancedRAGService.getAnswerWithMultihopSearch(query, startDocumentId, tenantId, maxHops, topK, threshold);
+        return fileProcessingRagService.getAnswerWithMultihopSearch(query, startDocumentId, tenantId, maxHops, topK, threshold);
+    }
+
+    @Operation(summary = "Advanced RAG flow: Get the answer to the asked query using data stored in vector table using Advanced RAG flow", description = """
+            Sample data is already stored in vector table using '/save-test-data'. If not present then trigger that endpoint.
+            """)
+    @GetMapping("/search")
+    public String getAnswerUsingAdvancedRagFlow(@RequestParam(name = "question", defaultValue = "What is class in Java?") String query){
+        return advancedRagProcessingService.getAnswer(query);
     }
 }
