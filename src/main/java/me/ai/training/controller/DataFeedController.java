@@ -17,7 +17,9 @@ import org.springframework.web.bind.annotation.*;
  *
  *
  */
-@Tag(name = "Test Data Storage")
+@Tag(name = "Test Data Feeding", description = """
+        Insert test data to the database or vector db
+        """)
 @RestController
 @RequestMapping("/data-feed")
 @Slf4j

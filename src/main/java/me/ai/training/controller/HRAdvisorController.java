@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  *
  *
  */
-@Tag(name = "Assignments")
+@Tag(name = "Lab10: Assignments")
 @RestController
 @RequestMapping("/hr-advisor")
 public class HRAdvisorController {
