@@ -12,6 +12,8 @@ The following Spring AI concepts are implemented in this repository.
 10. RAG using manual search request creation, QuestionAnswerAdvisor, RetrievalAugmentationAdvisor
 11. Searching through Documents with document id and tenant id and topic with QuestionAnswerAdvisor
 12. MultiHop RAG: search through multiple files and chain of documents (chained retrieval). Model those relations as metadata.
+13. Advanced RAG: Stages of Rag pipelines - Pre retreival, Retrieval, Post retreival, Generation
+14. Text to Audio/Image generations
 
 # Assignments Implemented
 1. Create a SpringBoot service using SpringAI that takes dynamic user input to generate a customized travel itinerary. Participants must demonstrate how to use PromptTemplate to manage dynamic variables and a System Message to define the Persona.
@@ -47,3 +49,13 @@ OpenSearch:
 
 [OpenSearch Dashboard Windows Installation](https://docs.opensearch.org/latest/install-and-configure/install-dashboards/windows/)
 
+
+---
+
+## 🌟 Developer/Contributor
+Name: Rohit Shamrao Muneshwar  
+Email: rohit.muneshwar1406@gmail.com  
+LinkedIn Profile: [Click Here](https://www.linkedin.com/in/rohit-muneshwar-a9079258/)  
+Other Github repositories: [Click Here](https://github.com/rohit1406?tab=repositories)
+
+---
