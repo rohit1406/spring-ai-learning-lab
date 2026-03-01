@@ -107,4 +107,24 @@ public class DataFeedController {
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Data could not be saved: "+ex.getMessage());
         }
     }
+
+    @Operation(summary = "save data from files to Vector Store", description = """
+            Use this method to ONLY save the test data to vector store.
+            File Location: classpath://subtitles/TheLastSignal-scifi-drama-fictional-short-film.srt
+            """)
+    @PostMapping("/save-last-signal-subtitle-data")
+    public ResponseEntity<String> saveLastSignalSubtitleData(){
+        try {
+            dataFeedService.validateData("external sensors just rebooted on their own");
+            log.info("Saving data");
+            dataFeedService.ingestSmallerChunks(new ClassPathResource("subtitles/TheLastSignal-scifi-drama-fictional-short-film.srt"), "the-last-signal");
+            return ResponseEntity.ok("Data saved successfully");
+        }catch(DataStoreException ex){
+            log.error("Exception occurred:", ex);
+            return ResponseEntity.status(HttpStatus.FOUND).body(ex.getMessage());
+        } catch(Exception ex){
+            log.error("Exception occurred:", ex);
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("Data could not be saved: "+ex.getMessage());
+        }
+    }
 }

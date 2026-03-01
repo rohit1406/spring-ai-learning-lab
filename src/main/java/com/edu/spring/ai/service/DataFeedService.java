@@ -10,6 +10,7 @@ import org.springframework.ai.reader.tika.TikaDocumentReader;
 import org.springframework.ai.transformer.splitter.TokenTextSplitter;
 import org.springframework.ai.vectorstore.SearchRequest;
 import org.springframework.ai.vectorstore.VectorStore;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
@@ -95,6 +96,18 @@ public class DataFeedService {
                 })
                 .toList();
         vectorStore.add(enrichedDocuments);
+    }
+
+    public void ingestSmallerChunks(Resource resource, String tenantId){
+        String documentId = resource.getFilename();
+        TikaDocumentReader tikaDocumentReader = new TikaDocumentReader(resource);
+        List<Document> originalDocuments = tikaDocumentReader.get();
+        TokenTextSplitter tokenTextSplitter = new TokenTextSplitter(128, 60, 5, 1500, true, List.of('.', '?', '!', '\n'));
+        List<Document> splitDocuments = tokenTextSplitter.apply(originalDocuments);
+        List<Document> enrichedDocuments = splitDocuments.stream().map(doc -> new Document(doc.getText(), Map.of("document_id", documentId, "tenant_id", tenantId))).toList();
+        log.info("document:{}, orgDocuments:{} and splitDocuments:{}",documentId, originalDocuments.size(), splitDocuments.size());
+        vectorStore.add(enrichedDocuments);
+        log.info("chunks of size {} saved to vector db", enrichedDocuments.size());
     }
 
     private static String getTopic(Document doc) {

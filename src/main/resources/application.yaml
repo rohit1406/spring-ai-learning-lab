@@ -124,8 +124,8 @@ logging:
 # Sort the tags and operations
 springdoc:
   swagger-ui:
-    enabled: true
+    use-root-path: true
+    path: /swagger-ui.html
+    disable-swagger-default-url: true
     tagsSorter: alpha
     #operations-sorter: alpha
-  api-docs:
-    enabled: true
