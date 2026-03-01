@@ -1,0 +1,720 @@
+1
+00:00:02,000 --> 00:00:06,000
+[Alarm beeping] Captain, external sensors just rebooted on their own.
+
+2
+00:00:12,000 --> 00:00:16,000
+CAPTAIN LIRA: That's not possible. We've had no power for days.
+
+3
+00:00:22,000 --> 00:00:26,000
+TECH RAN: The antenna array is transmitting… but not our frequency.
+
+4
+00:00:32,000 --> 00:00:36,000
+CAPTAIN LIRA: Patch it. Audio only. Be ready to cut it off.
+
+5
+00:00:42,000 --> 00:00:46,000
+[Distorted static] 'To anyone hearing this… we failed.'
+
+6
+00:00:52,000 --> 00:00:56,000
+TECH RAN: Captain, the voiceprint—it's you.
+
+7
+00:01:02,000 --> 00:01:06,000
+[Soft static] The rift glows like a bruise in space.
+
+8
+00:01:12,000 --> 00:01:16,000
+CAPTAIN LIRA: We hold position until we understand this.
+
+9
+00:01:22,000 --> 00:01:26,000
+TECH RAN: I'm seeing a carrier we don't own.
+
+10
+00:01:32,000 --> 00:01:36,000
+[Transmission] 'Stay away from the rift. It remembers.'
+
+11
+00:01:42,000 --> 00:01:46,000
+The rift outside flickers; we hold our breath.
+
+12
+00:01:52,000 --> 00:01:56,000
+We catalog anomalies and conserve power.
+
+13
+00:02:02,000 --> 00:02:06,000
+[Hull creaks] Micro‑fractures register on the skin.
+
+14
+00:02:12,000 --> 00:02:16,000
+CAPTAIN LIRA: No heroics. Discipline saves lives.
+
+15
+00:02:22,000 --> 00:02:26,000
+TECH RAN: Voiceprint analyzer is running.
+
+16
+00:02:32,000 --> 00:02:36,000
+[Ghostly echo] 'We were us, but not… entirely.'
+
+17
+00:02:42,000 --> 00:02:46,000
+The rift outside flickers; we hold our breath.
+
+18
+00:02:52,000 --> 00:02:56,000
+We catalog anomalies and conserve power.
+
+19
+00:03:02,000 --> 00:03:06,000
+[Console chirps] Power relays cycle in low‑power mode.
+
+20
+00:03:12,000 --> 00:03:16,000
+CAPTAIN LIRA: Patch it through. Audio only.
+
+21
+00:03:22,000 --> 00:03:26,000
+TECH RAN: Power grid is unstable but holding.
+
+22
+00:03:32,000 --> 00:03:36,000
+[Broken whisper] 'Timestamps don't match. Run.'
+
+23
+00:03:42,000 --> 00:03:46,000
+The rift outside flickers; we hold our breath.
+
+24
+00:03:52,000 --> 00:03:56,000
+We catalog anomalies and conserve power.
+
+25
+00:04:02,000 --> 00:04:06,000
+[Distant thud] Something brushes the outer hull.
+
+26
+00:04:12,000 --> 00:04:16,000
+CAPTAIN LIRA: I want redundancies on every critical bus.
+
+27
+00:04:22,000 --> 00:04:26,000
+TECH RAN: The rift's edge is shearing radio bands.
+
+28
+00:04:32,000 --> 00:04:36,000
+[Static-laced] 'Loop after loop. We forget, then repeat.'
+
+29
+00:04:42,000 --> 00:04:46,000
+The rift outside flickers; we hold our breath.
+
+30
+00:04:52,000 --> 00:04:56,000
+We catalog anomalies and conserve power.
+
+31
+00:05:02,000 --> 00:05:06,000
+[Air recycler hum] Condensation beads on the bulkhead.
+
+32
+00:05:12,000 --> 00:05:16,000
+CAPTAIN LIRA: If it's bait, we don't bite—yet.
+
+33
+00:05:22,000 --> 00:05:26,000
+TECH RAN: I'm throttling background processes to save juice.
+
+34
+00:05:32,000 --> 00:05:36,000
+[Fading] 'Whoever you are—cut power.'
+
+35
+00:05:42,000 --> 00:05:46,000
+The rift outside flickers; we hold our breath.
+
+36
+00:05:52,000 --> 00:05:56,000
+We catalog anomalies and conserve power.
+
+37
+00:06:02,000 --> 00:06:06,000
+[Alarm beeping] External sensors flicker to life.
+
+38
+00:06:12,000 --> 00:06:16,000
+CAPTAIN LIRA: Status report. Keep it tight.
+
+39
+00:06:22,000 --> 00:06:26,000
+TECH RAN: Antenna array is live, but it shouldn't be.
+
+40
+00:06:32,000 --> 00:06:36,000
+[Distorted voice] 'If anyone hears this… we failed.'
+
+41
+00:06:42,000 --> 00:06:46,000
+The rift outside flickers; we hold our breath.
+
+42
+00:06:52,000 --> 00:06:56,000
+We catalog anomalies and conserve power.
+
+43
+00:07:02,000 --> 00:07:06,000
+[Soft static] The rift glows like a bruise in space.
+
+44
+00:07:12,000 --> 00:07:16,000
+CAPTAIN LIRA: We hold position until we understand this.
+
+45
+00:07:22,000 --> 00:07:26,000
+TECH RAN: I'm seeing a carrier we don't own.
+
+46
+00:07:32,000 --> 00:07:36,000
+[Transmission] 'Stay away from the rift. It remembers.'
+
+47
+00:07:42,000 --> 00:07:46,000
+The rift outside flickers; we hold our breath.
+
+48
+00:07:52,000 --> 00:07:56,000
+We catalog anomalies and conserve power.
+
+49
+00:08:02,000 --> 00:08:06,000
+[Hull creaks] Micro‑fractures register on the skin.
+
+50
+00:08:12,000 --> 00:08:16,000
+CAPTAIN LIRA: No heroics. Discipline saves lives.
+
+51
+00:08:22,000 --> 00:08:26,000
+TECH RAN: Voiceprint analyzer is running.
+
+52
+00:08:32,000 --> 00:08:36,000
+[Ghostly echo] 'We were us, but not… entirely.'
+
+53
+00:08:42,000 --> 00:08:46,000
+The rift outside flickers; we hold our breath.
+
+54
+00:08:52,000 --> 00:08:56,000
+We catalog anomalies and conserve power.
+
+55
+00:09:02,000 --> 00:09:06,000
+[Console chirps] Power relays cycle in low‑power mode.
+
+56
+00:09:12,000 --> 00:09:16,000
+CAPTAIN LIRA: Patch it through. Audio only.
+
+57
+00:09:22,000 --> 00:09:26,000
+TECH RAN: Power grid is unstable but holding.
+
+58
+00:09:32,000 --> 00:09:36,000
+[Broken whisper] 'Timestamps don't match. Run.'
+
+59
+00:09:42,000 --> 00:09:46,000
+The rift outside flickers; we hold our breath.
+
+60
+00:09:52,000 --> 00:09:56,000
+We catalog anomalies and conserve power.
+
+61
+00:10:02,000 --> 00:10:06,000
+[Ship rumbling] Energy spike from the rift! We're being pulled in.
+
+62
+00:10:12,000 --> 00:10:16,000
+CAPTAIN LIRA: Stabilize the thrusters! Hold at twenty degrees pitch.
+
+63
+00:10:22,000 --> 00:10:26,000
+TECH RAN: The loop window repeats every fourteen minutes.
+
+64
+00:10:32,000 --> 00:10:36,000
+[Layered] 'We tried to fight. The rift learned us.'
+
+65
+00:10:42,000 --> 00:10:46,000
+Rift harmonics climb; time feels threaded.
+
+66
+00:10:52,000 --> 00:10:56,000
+We map the loop, looking for a breaking point.
+
+67
+00:11:02,000 --> 00:11:06,000
+[Gyros whine] Auto‑stabilizers fight the pull.
+
+68
+00:11:12,000 --> 00:11:16,000
+CAPTAIN LIRA: We break the loop by breaking the pattern.
+
+69
+00:11:22,000 --> 00:11:26,000
+TECH RAN: I'm tagging anomalies as 'us‑variants'.
+
+70
+00:11:32,000 --> 00:11:36,000
+[Hollow] 'Last chance is not a metaphor.'
+
+71
+00:11:42,000 --> 00:11:46,000
+Rift harmonics climb; time feels threaded.
+
+72
+00:11:52,000 --> 00:11:56,000
+We map the loop, looking for a breaking point.
+
+73
+00:12:02,000 --> 00:12:06,000
+[Ship rumbling] The rift swells like a tide.
+
+74
+00:12:12,000 --> 00:12:16,000
+CAPTAIN LIRA: Counter‑thrust twelve percent. Hold vector.
+
+75
+00:12:22,000 --> 00:12:26,000
+TECH RAN: Structural integrity at eighty‑two percent.
+
+76
+00:12:32,000 --> 00:12:36,000
+[Transmission returns] 'This is your echo. We didn't listen.'
+
+77
+00:12:42,000 --> 00:12:46,000
+Rift harmonics climb; time feels threaded.
+
+78
+00:12:52,000 --> 00:12:56,000
+We map the loop, looking for a breaking point.
+
+79
+00:13:02,000 --> 00:13:06,000
+[Lights flicker] Shadows stretch across the deck.
+
+80
+00:13:12,000 --> 00:13:16,000
+CAPTAIN LIRA: We treat that message as a warning, not an order.
+
+81
+00:13:22,000 --> 00:13:26,000
+TECH RAN: I'm seeing reflections—copies of our telemetry.
+
+82
+00:13:32,000 --> 00:13:36,000
+[Overlapping voices] 'Cut power or be folded.'
+
+83
+00:13:42,000 --> 00:13:46,000
+Rift harmonics climb; time feels threaded.
+
+84
+00:13:52,000 --> 00:13:56,000
+We map the loop, looking for a breaking point.
+
+85
+00:14:02,000 --> 00:14:06,000
+[Metal groan] Frames protest the strain.
+
+86
+00:14:12,000 --> 00:14:16,000
+CAPTAIN LIRA: Mark every loop artifact. We learn fast or we die.
+
+87
+00:14:22,000 --> 00:14:26,000
+TECH RAN: Voiceprint matches you, Captain. Perfectly.
+
+88
+00:14:32,000 --> 00:14:36,000
+TECH RAN: The rift is generating a recursive loop. We're seeing versions of us.
+
+89
+00:14:42,000 --> 00:14:46,000
+CAPTAIN LIRA: If we break the loop, we break the cycle of our destruction.
+
+90
+00:14:52,000 --> 00:14:56,000
+We map the loop, looking for a breaking point.
+
+91
+00:15:02,000 --> 00:15:06,000
+[Sparks] A panel pops, then dies.
+
+92
+00:15:12,000 --> 00:15:16,000
+CAPTAIN LIRA: Helm, trim pitch by two degrees.
+
+93
+00:15:22,000 --> 00:15:26,000
+TECH RAN: Energy spike building inside the rift.
+
+94
+00:15:32,000 --> 00:15:36,000
+[Urgent] 'Shut it down. Live in the dark.'
+
+95
+00:15:42,000 --> 00:15:46,000
+Rift harmonics climb; time feels threaded.
+
+96
+00:15:52,000 --> 00:15:56,000
+We map the loop, looking for a breaking point.
+
+97
+00:16:02,000 --> 00:16:06,000
+[Sensor ping] Echo returns from nowhere and everywhere.
+
+98
+00:16:12,000 --> 00:16:16,000
+CAPTAIN LIRA: Lock down nonessential compartments.
+
+99
+00:16:22,000 --> 00:16:26,000
+TECH RAN: The loop window repeats every fourteen minutes.
+
+100
+00:16:32,000 --> 00:16:36,000
+[Layered] 'We tried to fight. The rift learned us.'
+
+101
+00:16:42,000 --> 00:16:46,000
+Rift harmonics climb; time feels threaded.
+
+102
+00:16:52,000 --> 00:16:56,000
+We map the loop, looking for a breaking point.
+
+103
+00:17:02,000 --> 00:17:06,000
+[Gyros whine] Auto‑stabilizers fight the pull.
+
+104
+00:17:12,000 --> 00:17:16,000
+CAPTAIN LIRA: We break the loop by breaking the pattern.
+
+105
+00:17:22,000 --> 00:17:26,000
+TECH RAN: I'm tagging anomalies as 'us‑variants'.
+
+106
+00:17:32,000 --> 00:17:36,000
+[Hollow] 'Last chance is not a metaphor.'
+
+107
+00:17:42,000 --> 00:17:46,000
+Rift harmonics climb; time feels threaded.
+
+108
+00:17:52,000 --> 00:17:56,000
+We map the loop, looking for a breaking point.
+
+109
+00:18:02,000 --> 00:18:06,000
+[Ship rumbling] The rift swells like a tide.
+
+110
+00:18:12,000 --> 00:18:16,000
+CAPTAIN LIRA: Counter‑thrust twelve percent. Hold vector.
+
+111
+00:18:22,000 --> 00:18:26,000
+TECH RAN: Structural integrity at eighty‑two percent.
+
+112
+00:18:32,000 --> 00:18:36,000
+[Transmission returns] 'This is your echo. We didn't listen.'
+
+113
+00:18:42,000 --> 00:18:46,000
+Rift harmonics climb; time feels threaded.
+
+114
+00:18:52,000 --> 00:18:56,000
+We map the loop, looking for a breaking point.
+
+115
+00:19:02,000 --> 00:19:06,000
+[Lights flicker] Shadows stretch across the deck.
+
+116
+00:19:12,000 --> 00:19:16,000
+CAPTAIN LIRA: We treat that message as a warning, not an order.
+
+117
+00:19:22,000 --> 00:19:26,000
+TECH RAN: I'm seeing reflections—copies of our telemetry.
+
+118
+00:19:32,000 --> 00:19:36,000
+[Overlapping voices] 'Cut power or be folded.'
+
+119
+00:19:42,000 --> 00:19:46,000
+Rift harmonics climb; time feels threaded.
+
+120
+00:19:52,000 --> 00:19:56,000
+We map the loop, looking for a breaking point.
+
+121
+00:20:02,000 --> 00:20:06,000
+[New transmission] 'This is your last chance. Cut power to survive.'
+
+122
+00:20:12,000 --> 00:20:16,000
+CAPTAIN LIRA: Helm, kill thrust. Engineering, kill heat.
+
+123
+00:20:22,000 --> 00:20:26,000
+TECH RAN: Field collapse beginning. We might drift free.
+
+124
+00:20:32,000 --> 00:20:36,000
+[Echo breaks] 'We aren't you anymore.'
+
+125
+00:20:42,000 --> 00:20:46,000
+Darkness swallows our noise; the rift starves.
+
+126
+00:20:52,000 --> 00:20:56,000
+We ride the silence and wait for release.
+
+127
+00:21:02,000 --> 00:21:06,000
+[Rift thunders] Then narrows, like an eye closing.
+
+128
+00:21:12,000 --> 00:21:16,000
+CAPTAIN LIRA: Say it with me—discipline.
+
+129
+00:21:22,000 --> 00:21:26,000
+TECH RAN: I'm seeing the loop artifacts thin out.
+
+130
+00:21:32,000 --> 00:21:36,000
+[Static falls] 'Cycle ended.'
+
+131
+00:21:42,000 --> 00:21:46,000
+Darkness swallows our noise; the rift starves.
+
+132
+00:21:52,000 --> 00:21:56,000
+We ride the silence and wait for release.
+
+133
+00:22:02,000 --> 00:22:06,000
+[Panels die] Consoles go cold under our hands.
+
+134
+00:22:12,000 --> 00:22:16,000
+CAPTAIN LIRA: We will not be the message we heard.
+
+135
+00:22:22,000 --> 00:22:26,000
+TECH RAN: We're free‑drifting. Vectors are clean.
+
+136
+00:22:32,000 --> 00:22:36,000
+[Empty band] '—'
+
+137
+00:22:42,000 --> 00:22:46,000
+Darkness swallows our noise; the rift starves.
+
+138
+00:22:52,000 --> 00:22:56,000
+We ride the silence and wait for release.
+
+139
+00:23:02,000 --> 00:23:06,000
+[Silence] Only the hull ticks as it cools.
+
+140
+00:23:12,000 --> 00:23:16,000
+CAPTAIN LIRA: Prepare to ride it out in silence.
+
+141
+00:23:22,000 --> 00:23:26,000
+TECH RAN: The echo line is gone. No more repeats.
+
+142
+00:23:32,000 --> 00:23:36,000
+[No transmission] —
+
+143
+00:23:42,000 --> 00:23:46,000
+Darkness swallows our noise; the rift starves.
+
+144
+00:23:52,000 --> 00:23:56,000
+We ride the silence and wait for release.
+
+145
+00:24:02,000 --> 00:24:06,000
+[Deep silence] Systems coast in minimal draw.
+
+146
+00:24:12,000 --> 00:24:16,000
+CAPTAIN LIRA: Against protocol… we go dark. Now.
+
+147
+00:24:22,000 --> 00:24:26,000
+TECH RAN: Cutting main bus. Life support to passive.
+
+148
+00:24:32,000 --> 00:24:36,000
+CAPTAIN LIRA: Against every protocol… shut it all down. Now.
+
+149
+00:24:42,000 --> 00:24:46,000
+[Systems powering off] Ship entering dark mode. Rift field collapsing.
+
+150
+00:24:52,000 --> 00:24:56,000
+We ride the silence and wait for release.
+
+151
+00:25:02,000 --> 00:25:06,000
+[Manual switches click] Lights dim to red.
+
+152
+00:25:12,000 --> 00:25:16,000
+CAPTAIN LIRA: If the pattern feeds on us, we starve it.
+
+153
+00:25:22,000 --> 00:25:26,000
+TECH RAN: Dark mode engaged. Emissions near zero.
+
+154
+00:25:32,000 --> 00:25:36,000
+[Dying carrier] 'Silence is the new signal.'
+
+155
+00:25:42,000 --> 00:25:46,000
+Darkness swallows our noise; the rift starves.
+
+156
+00:25:52,000 --> 00:25:56,000
+We ride the silence and wait for release.
+
+157
+00:26:02,000 --> 00:26:06,000
+TECH RAN: Main bus is cold. Emissions near zero.
+
+158
+00:26:12,000 --> 00:26:16,000
+CAPTAIN LIRA: Helm, kill thrust. Engineering, kill heat.
+
+159
+00:26:22,000 --> 00:26:26,000
+TECH RAN: Field collapse beginning. We might drift free.
+
+160
+00:26:32,000 --> 00:26:36,000
+[Echo breaks] 'We aren't you anymore.'
+
+161
+00:26:42,000 --> 00:26:46,000
+Darkness swallows our noise; the rift starves.
+
+162
+00:26:52,000 --> 00:26:56,000
+We ride the silence and wait for release.
+
+163
+00:27:02,000 --> 00:27:06,000
+[Rift thunders] Then narrows, like an eye closing.
+
+164
+00:27:12,000 --> 00:27:16,000
+CAPTAIN LIRA: Say it with me—discipline.
+
+165
+00:27:22,000 --> 00:27:26,000
+TECH RAN: I'm seeing the loop artifacts thin out.
+
+166
+00:27:32,000 --> 00:27:36,000
+[Static falls] 'Cycle ended.'
+
+167
+00:27:42,000 --> 00:27:46,000
+Darkness swallows our noise; the rift starves.
+
+168
+00:27:52,000 --> 00:27:56,000
+We ride the silence and wait for release.
+
+169
+00:28:02,000 --> 00:28:06,000
+[Panels die] Consoles go cold under our hands.
+
+170
+00:28:12,000 --> 00:28:16,000
+TECH RAN: We're drifting free. The loop is gone. I think… we made it.
+
+171
+00:28:22,000 --> 00:28:26,000
+TECH RAN: We're free‑drifting. Vectors are clean.
+
+172
+00:28:32,000 --> 00:28:36,000
+[Empty band] '—'
+
+173
+00:28:42,000 --> 00:28:46,000
+Darkness swallows our noise; the rift starves.
+
+174
+00:28:52,000 --> 00:28:56,000
+We ride the silence and wait for release.
+
+175
+00:29:02,000 --> 00:29:06,000
+[Silence] Only the hull ticks as it cools.
+
+176
+00:29:12,000 --> 00:29:16,000
+CAPTAIN LIRA: Prepare to ride it out in silence.
+
+177
+00:29:22,000 --> 00:29:26,000
+TECH RAN: The echo line is gone. No more repeats.
+
+178
+00:29:32,000 --> 00:29:36,000
+[No transmission] —
+
+179
+00:29:42,000 --> 00:29:46,000
+CAPTAIN LIRA: Let this be the last signal we follow blindly.
+
+180
+00:29:52,000 --> 00:29:56,000
+[Fade out] End of transmission.
+

@@ -124,5 +124,8 @@ logging:
 # Sort the tags and operations
 springdoc:
   swagger-ui:
+    enabled: true
     tagsSorter: alpha
     #operations-sorter: alpha
+  api-docs:
+    enabled: true
