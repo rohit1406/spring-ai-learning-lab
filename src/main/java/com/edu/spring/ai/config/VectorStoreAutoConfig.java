@@ -51,4 +51,11 @@ public class VectorStoreAutoConfig {
                 .build();
     }
 
+    // This can be any EmbeddingModel implementation
+    @Bean
+    public EmbeddingModel embeddingModel() {
+        // TODO: configure embedding model here
+        //return new OpenAiEmbeddingModel(new OpenAiApi(System.getenv("OPENAI_API_KEY")));
+        return null;
+    }
 }
