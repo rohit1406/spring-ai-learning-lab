@@ -10,16 +10,18 @@ spring:
         repository:
           jdbc:
             initialize-schema: always
-    vectorstore:
-      # Installation: https://docs.opensearch.org/latest/install-and-configure/install-opensearch/windows/
-      # vector_store table is auto created
-      opensearch:
-        uris: http://localhost:9200
-        username: ${OPENSEARCH_USERNAME}
-        password: ${OPENSEARCH_PASSWORD}
-        index-name: spring-ai-document-index
-        initialize-schema: true
-        similarity-function: cosinesimil
+    custom:
+      vectorstore:
+        enabled: false
+        # Installation: https://docs.opensearch.org/latest/install-and-configure/install-opensearch/windows/
+        # vector_store table is auto created
+        opensearch:
+          uris: http://localhost:9200
+          username: ${OPENSEARCH_USERNAME}
+          password: ${OPENSEARCH_PASSWORD}
+          index-name: spring-ai-document-index
+          initialize-schema: true
+          similarity-function: cosinesimil
       #pgvector:
        # initialize-schema: true
 

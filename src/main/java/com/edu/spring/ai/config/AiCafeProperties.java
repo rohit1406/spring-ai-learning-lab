@@ -26,7 +26,7 @@ import java.text.SimpleDateFormat;
 @ConfigurationProperties(prefix = "spring.ai.cafe")
 @Data
 @Slf4j
-public class AiCafeConfig {
+public class AiCafeProperties {
     private String baseUrl;
     private String apiKey;
     private String completionPath;
@@ -49,37 +49,5 @@ public class AiCafeConfig {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-    }
-
-
-    @Bean
-    @ConditionalOnBooleanProperty(prefix = "spring.ai.cafe", name = "enabled")
-    OpenAiApi openAiApi(){
-        log.info("Creating custom OpenAiApi bean: {}",this.getCompletionPath());
-        HttpHeaders headers = new HttpHeaders();
-        headers.set("api-key", this.getApiKey());
-        headers.set("Content-Type", MediaType.APPLICATION_JSON_VALUE);
-        EmbeddingListHttpMessageConverter embeddingListHttpMessageConverter = new EmbeddingListHttpMessageConverter();
-        JsonMapper jsonMapper = JsonMapper.builder()
-                .findAndAddModules()
-                .enable(SerializationFeature.INDENT_OUTPUT)
-                .defaultDateFormat(new SimpleDateFormat("yyyy-MM-dd"))
-                .build();
-        RestClient.Builder builder = RestClient.builder()
-                .configureMessageConverters(c -> c.addCustomConverter(new JacksonJsonHttpMessageConverter(jsonMapper)).addCustomConverter(embeddingListHttpMessageConverter));
-        return OpenAiApi.builder()
-                .apiKey(this.getApiKey())
-                .baseUrl(this.getBaseUrl())
-                .completionsPath(this.getCompletionPath())
-                .embeddingsPath(this.getEmbeddingPath())
-                .headers(headers)
-                .restClientBuilder(builder)
-                .build();
-    }
-
-    @Bean
-    @ConditionalOnBooleanProperty(prefix = "spring.ai.cafe", name = "enabled")
-    OpenAiEmbeddingModel openAiEmbeddingModel(OpenAiApi openAiApi){
-        return new OpenAiEmbeddingModel(openAiApi);
     }
 }

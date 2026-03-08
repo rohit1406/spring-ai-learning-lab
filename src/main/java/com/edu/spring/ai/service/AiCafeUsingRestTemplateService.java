@@ -1,7 +1,8 @@
 package com.edu.spring.ai.service;
 
+import com.edu.spring.ai.config.AiCafeProperties;
 import lombok.extern.slf4j.Slf4j;
-import com.edu.spring.ai.config.AiCafeConfig;
+import com.edu.spring.ai.config.AiCafeAutoConfig;
 import com.edu.spring.ai.dto.Message;
 import com.edu.spring.ai.dto.Request;
 import com.edu.spring.ai.dto.Response;
@@ -21,9 +22,9 @@ import java.util.List;
 @Service
 @Slf4j
 public class AiCafeUsingRestTemplateService {
-    private final AiCafeConfig aiCafeConfig;
+    private final AiCafeProperties aiCafeConfig;
     private final RestTemplate restTemplate;
-    public AiCafeUsingRestTemplateService(AiCafeConfig aiCafeConfig){
+    public AiCafeUsingRestTemplateService(AiCafeProperties aiCafeConfig){
         this.aiCafeConfig = aiCafeConfig;
         this.restTemplate = new RestTemplate();
     }

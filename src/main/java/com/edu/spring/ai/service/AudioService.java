@@ -72,7 +72,7 @@ public class AudioService {
         // load audio file from classpath
         ClassPathResource audioResource = new ClassPathResource("audio/"+filename);
         AudioTranscriptionOptions options = OpenAiAudioTranscriptionOptions.builder()
-                .responseFormat(OpenAiAudioApi.TranscriptResponseFormat.VERBOSE_JSON)
+                .responseFormat(OpenAiAudioApi.TranscriptResponseFormat.SRT)
                 .build();
         AudioTranscriptionPrompt audioTranscriptionPrompt = new AudioTranscriptionPrompt(audioResource, options);
         return openAiAudioTranscriptionModel.call(audioTranscriptionPrompt)
