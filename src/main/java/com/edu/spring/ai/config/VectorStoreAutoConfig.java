@@ -7,6 +7,8 @@ import org.apache.hc.core5.http.HttpHost;
 import org.opensearch.client.opensearch.OpenSearchClient;
 import org.opensearch.client.transport.httpclient5.ApacheHttpClient5TransportBuilder;
 import org.springframework.ai.embedding.EmbeddingModel;
+import org.springframework.ai.openai.OpenAiEmbeddingModel;
+import org.springframework.ai.openai.api.OpenAiApi;
 import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.ai.vectorstore.opensearch.OpenSearchVectorStore;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,9 +55,7 @@ public class VectorStoreAutoConfig {
 
     // This can be any EmbeddingModel implementation
     @Bean
-    public EmbeddingModel embeddingModel() {
-        // TODO: configure embedding model here
-        //return new OpenAiEmbeddingModel(new OpenAiApi(System.getenv("OPENAI_API_KEY")));
-        return null;
+    public EmbeddingModel embeddingModel(OpenAiApi openAiApi) {
+        return new OpenAiEmbeddingModel(openAiApi);
     }
 }
