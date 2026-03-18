@@ -14,6 +14,7 @@ The following Spring AI concepts are implemented in this repository.
 12. MultiHop RAG: search through multiple files and chain of documents (chained retrieval). Model those relations as metadata.
 13. Advanced RAG: Stages of Rag pipelines - Pre retreival, Retrieval, Post retreival, Generation
 14. Text to Audio/Image generations
+15. AI Agents and MCPs
 
 # Assignments Implemented
 1. Create a SpringBoot service using SpringAI that takes dynamic user input to generate a customized travel itinerary. Participants must demonstrate how to use PromptTemplate to manage dynamic variables and a System Message to define the Persona.
