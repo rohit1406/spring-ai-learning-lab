@@ -1,20 +1,38 @@
 # About this Project
 The following Spring AI concepts are implemented in this repository.
 1. Integration of Spring AI into Spring Boot application
+
+    [Spring Boot Revisited](./src/main/resources/notes/1-spring-boot-revisited.md)
 2. Exposing REST APIs for taking user's input as a prompt, make a call to OpenAI for processing the request and get the output from OpenAI to send it back to the User.
 3. Use of UserMessage, AssistantMessage and SystemMessage while generating prompts
 4. Use of String Templates (.st) for dynamic prompting
 5. Output Convertors to convert the output received from OpenAI and display it to the user. In this demonstration ListOutputConvertor, MapOutputConvertor and BeanOutputConvertors are used.
 6. Types of Prompting are demonstrated as well: Zero Shot Prompting, Few Shot Prompting and Chain of Thought (CoT) prompting
+
+   [Spring AI notes](./src/main/resources/notes/2-spring-ai-intro.md) And [Prompts notes](./src/main/resources/notes/3-spring-ai-prompts.md)
 7. Data Augmentation Techniques such as Stuffing, Tool Calling/Function calling (used in lower versions of spring ai - 1.0.6) are utilized while retrieving data from LLM.
 8. Use of ChatMemory: to remember the conversation history and form the context with it to answer the upcoming questions from the user.
+
+    [Spring AI Data Augmentation Techniques](./src/main/resources/notes/4-spring-ai-data-augmentation-techniques.md)
 9. Use of Advisors: to intercept the request
+
+    [Advisors](./src/main/resources/notes/5-spring-ai-advisors.md) And [Data Streaming](./src/main/resources/notes/6-spring-ai-data-streaming.md)
 10. RAG using manual search request creation, QuestionAnswerAdvisor, RetrievalAugmentationAdvisor
+
+    [Simple RAG Notes](./src/main/resources/notes/7-spring-ai-rag.md)
 11. Searching through Documents with document id and tenant id and topic with QuestionAnswerAdvisor
 12. MultiHop RAG: search through multiple files and chain of documents (chained retrieval). Model those relations as metadata.
+
+    [Multihof RAG Notes](./src/main/resources/notes/8-spring-ai-work-with-multiple-files-rag.md) 
 13. Advanced RAG: Stages of Rag pipelines - Pre retreival, Retrieval, Post retreival, Generation
+
+    [Advanced RAG](./src/main/resources/notes/9-advanced-rag.md)
 14. Text to Audio/Image generations
+
+    [Text-to-Audio/Images Notes](./src/main/resources/notes/10-audio-and-images.md)
 15. AI Agents and MCPs
+
+    [AI Agents and MCPs Notes](./src/main/resources/notes/11-ai-agents-and-mcp.md)
 
 # Assignments Implemented
 1. Create a SpringBoot service using SpringAI that takes dynamic user input to generate a customized travel itinerary. Participants must demonstrate how to use PromptTemplate to manage dynamic variables and a System Message to define the Persona.

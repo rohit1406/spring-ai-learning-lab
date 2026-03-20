@@ -214,8 +214,8 @@ https://github.com/modelcontextprotocol/servers
 #### 2 layers
 1. Data layer
 2. Transport layer
-   a. stdio transport - If u want communication between local processes then we should use stdio transport (ie) our mcp server and client are running on the same mc locally
-   b. streamable transport - if ur client is local and  mcp server is remote then we use stremable http transport
+   - stdio transport - If u want communication between local processes then we should use stdio transport (ie) our mcp server and client are running on the same mc locally
+   - streamable transport - if ur client is local and  mcp server is remote then we use stremable http transport
 
 ### Steps
 
